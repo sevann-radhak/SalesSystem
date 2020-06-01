@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SalesSystem.Areas.Users.Models;
 
 namespace SalesSystem.Data
 {
@@ -12,5 +10,7 @@ namespace SalesSystem.Data
             : base(options)
         {
         }
+
+        public DbSet<TUser> TUsers { get; set; }
     }
 }

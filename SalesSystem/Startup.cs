@@ -12,6 +12,7 @@ using SalesSystem.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SalesSystem.Helpers;
 
 namespace SalesSystem
 {
@@ -34,6 +35,9 @@ namespace SalesSystem
             //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
             //    .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<IConverterHelper, ConverterHelper>();
+            services.AddScoped<IImageHelper, ImageHelper>();
+            services.AddScoped<IUserHelper, UserHelper>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

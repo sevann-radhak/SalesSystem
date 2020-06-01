@@ -25,7 +25,7 @@ namespace SalesSystem.Areas.Users.Models
         [Required(ErrorMessage = "The field {0} is mandatory")]
         [Display(Name = "Phone Number")]
         [DataType(DataType.PhoneNumber)]
-        [RegularExpression(@"^\(?([0-9]{2})\)?[-. ]?([0-9]{2})[-. ]?([0-9]{5})$", ErrorMessage = "Invalid format")]
+        //[RegularExpression(@"^\(?([0-9]{2})\)?[-. ]?([0-9]{2})[-. ]?([0-9]{5})$", ErrorMessage = "Invalid format")]
         public string PhoneNumber { get; set; }
 
         [Required]
